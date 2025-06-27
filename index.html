@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zan Menu</title>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: black;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="image" />
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const imageName = urlParams.get("image");
+      if (imageName) {
+        document.getElementById("image").src = imageName + ".png";
+      }
+    </script>
+  </body>
+</html>
